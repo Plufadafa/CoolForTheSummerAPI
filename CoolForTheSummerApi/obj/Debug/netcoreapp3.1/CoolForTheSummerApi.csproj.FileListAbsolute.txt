@@ -21,6 +21,12 @@ C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\ne
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.csproj.CopyComplete
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\SharpCompress.dll
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.csproj.CoreCompileInputs.cache
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.MvcApplicationPartsAssemblyInfo.cache

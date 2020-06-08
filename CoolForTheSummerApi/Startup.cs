@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoolForTheSummerApi.Models;
+using CoolForTheSummerApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace CoolForTheSummerApi
@@ -26,11 +29,19 @@ namespace CoolForTheSummerApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // requires using Microsoft.Extensions.Options
+            services.Configure<CoolForTheSummerDatabaseSettings>(
+                Configuration.GetSection(nameof(CoolForTheSummerDatabaseSettings)));
+
+            services.AddSingleton<ICoolForTheSummerDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<CoolForTheSummerDatabaseSettings>>().Value);
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cool for the summer api", Version = "v1" });
             });
+            services.AddSingleton<CoolForTheSummerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
