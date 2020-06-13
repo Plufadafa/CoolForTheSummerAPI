@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoolForTheSummerApi.Models;
 using CoolForTheSummerApi.Services;
+using CoolForTheSummerApi.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -42,6 +43,9 @@ namespace CoolForTheSummerApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cool for the summer api", Version = "v1" });
             });
             services.AddSingleton<CoolForTheSummerService>();
+            services.AddSingleton<IWebScraperService, WebScraperService>();
+            services.AddSingleton<IFourChanService, FourChanService>();
+            services.AddSingleton<IBoardEnumValidator, BoardEnumValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

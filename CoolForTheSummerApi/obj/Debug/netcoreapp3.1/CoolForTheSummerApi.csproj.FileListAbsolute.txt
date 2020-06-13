@@ -27,6 +27,7 @@ C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\ne
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\bin\Debug\netcoreapp3.1\AngleSharp.dll
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.csproj.CoreCompileInputs.cache
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Project\CoolForTheSummer\CoolForTheSummerApi\CoolForTheSummerApi\obj\Debug\netcoreapp3.1\CoolForTheSummerApi.MvcApplicationPartsAssemblyInfo.cache

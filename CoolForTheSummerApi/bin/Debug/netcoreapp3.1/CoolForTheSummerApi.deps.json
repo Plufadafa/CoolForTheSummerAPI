@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "CoolForTheSummerApi/1.0.0": {
         "dependencies": {
+          "AngleSharp": "0.14.0",
           "MongoDB.Driver": "2.10.4",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Swashbuckle.AspNetCore.Swagger": "5.4.1",
@@ -315,6 +316,20 @@
         },
         "compile": {
           "CoolForTheSummerApi.dll": {}
+        }
+      },
+      "AngleSharp/0.14.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
         }
       },
       "DnsClient/1.3.1": {
@@ -3121,6 +3136,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AngleSharp/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
+      "path": "anglesharp/0.14.0",
+      "hashPath": "anglesharp.0.14.0.nupkg.sha512"
     },
     "DnsClient/1.3.1": {
       "type": "package",
