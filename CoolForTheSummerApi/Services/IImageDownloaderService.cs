@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AngleSharp.Dom;
-using CoolForTheSummerApi.Models;
 
 namespace CoolForTheSummerApi.Services
 {
-    public interface IWebScraperService
+    public interface IImageDownloaderService
     {
-        public Task<IElement> ScrapeForPost(string board);
+        public string DownloadImageToSiteDirectory(string url);
     }
 }

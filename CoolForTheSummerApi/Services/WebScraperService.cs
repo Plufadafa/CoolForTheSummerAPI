@@ -17,7 +17,7 @@ namespace CoolForTheSummerApi.Services
     {
         private string Title { get; set; }
         private string Url { get; set; }
-        private string _siteUrl = "http://www.4chan.org/";
+        private readonly string _siteUrl = "http://www.4chan.org/";
         public string[] QueryTerms { get; } = { "Ocean", "Nature", "Pollution" };
 
         public WebScraperService()
@@ -25,13 +25,13 @@ namespace CoolForTheSummerApi.Services
 
         }
 
-        public async Task<string> ScrapeForPost(string board)
+        public async Task<IElement> ScrapeForPost(string board)
         {
-            _siteUrl += board + "/";
+            var site = _siteUrl + board + "/";
             CancellationTokenSource cancellationToken = new CancellationTokenSource();
             HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Add("User-Agent", "fuck MooT"); 
-            HttpResponseMessage request = await httpClient.GetAsync(_siteUrl);
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "fuck MooT");
+            HttpResponseMessage request = await httpClient.GetAsync(site);
             cancellationToken.Token.ThrowIfCancellationRequested();
 
             Stream response = await request.Content.ReadAsStreamAsync();
@@ -46,8 +46,10 @@ namespace CoolForTheSummerApi.Services
             threadDivs = threadDivs.Where(t => !t.InnerHtml.Contains("stickyIcon"));
 
             var random = new Random();
+            var threadDivsLength = threadDivs.Count()-1;
+            var randomElement = random.Next(threadDivsLength);
 
-            return threadDivs.ToList()[random.Next(threadDivs.Count())].InnerHtml;
+            return threadDivs.ToList()[randomElement];
         }
     }
 }

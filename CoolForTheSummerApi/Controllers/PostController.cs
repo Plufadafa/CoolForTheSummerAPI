@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CoolForTheSummerApi.Services;
 using CoolForTheSummerApi.Validators;
 using Microsoft.AspNetCore.Http;
@@ -46,7 +42,7 @@ namespace CoolForTheSummerApi.Controllers
                 return NotFound(
                     "Board provided is either not a 4Chan board, or it's \"int\", \"out\" or \"3\" which aren't supported in this API because I'm lazy");
             }
-            var response = await _fourChanService.GetRandomPostFromBoard(board);
+            var response = await _fourChanService.GetRandomPostFromSpecifiedBoard(board);
             return Ok(response);
         }
     }

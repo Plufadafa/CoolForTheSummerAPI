@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using AngleSharp.Dom;
 using CoolForTheSummerApi.Models;
 
-namespace CoolForTheSummerApi.Services
+namespace CoolForTheSummerApi.Mappers
 {
-    public interface IWebScraperService
+    public interface IPostMapper
     {
-        public Task<IElement> ScrapeForPost(string board);
+        public PostViewModel Map(IElement element, string board);
     }
 }

@@ -8,7 +8,7 @@ namespace CoolForTheSummerApi.Services
 {
     public interface IFourChanService
     {
-        public Task<string> GetRandomPostFromRandomBoard();
-        public Task<string> GetRandomPostFromBoard(string board);
+        public Task<PostViewModel> GetRandomPostFromRandomBoard();
+        public Task<PostViewModel> GetRandomPostFromSpecifiedBoard(string board);
     }
 }

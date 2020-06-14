@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoolForTheSummerApi.Mappers;
 using CoolForTheSummerApi.Models;
 using CoolForTheSummerApi.Services;
 using CoolForTheSummerApi.Validators;
@@ -46,6 +47,8 @@ namespace CoolForTheSummerApi
             services.AddSingleton<IWebScraperService, WebScraperService>();
             services.AddSingleton<IFourChanService, FourChanService>();
             services.AddSingleton<IBoardEnumValidator, BoardEnumValidator>();
+            services.AddSingleton<IPostMapper, PostMapper>();
+            services.AddSingleton<IImageDownloaderService, ImageDownloaderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
