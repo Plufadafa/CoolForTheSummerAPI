@@ -16,7 +16,7 @@ namespace CoolForTheSummerApi.Models
         public string FileThumbHref { get; set; }// class="fileThumb"
         public string FileThumbStyles { get; set; }// within the img tag of the fileThumb class <a>
         public string PostMessage { get; set; }//class="postMessage"
-        public string LocalFileHref { get; set; }
-        public string LocalThumbFileHref { get; set; }
+        public string FileBase64 { get; set; }
+        public string FileThumbBase64 { get; set; }
     }
 }

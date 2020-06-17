@@ -28,7 +28,9 @@ namespace CoolForTheSummerApi.Mappers
                 FileHref = hrefValues.fileHref,
                 FileThumbHref = hrefValues.fileThumbHref,
                 FileThumbStyles = hrefValues.fileThumbStyles,
-                PostMessage = GetMessage(element)
+                PostMessage = GetMessage(element),
+                FileThumbBase64 = "",
+                FileBase64 = "",
             };
         }
 
@@ -85,18 +87,16 @@ namespace CoolForTheSummerApi.Mappers
 
         private string FormatAllHrefInMessage(string message)
         {
-            _board = "sp";
-
             Regex regex = new Regex("href=\"\\/" + _board + ".*?" + "\"");
             var match = regex.Match(message);
             if (match.Success)
             {
                 var replacementHref = match.Value.Substring(6);
                 replacementHref = "href=\"https://boards.4chan.org" + replacementHref;
+                replacementHref = replacementHref + " " + "target=\"_blank\"";
                 message = regex.Replace(message, replacementHref, 1);
                 return FormatAllHrefInMessage(message);
             }
-
             return message;
         }
     }

@@ -54,7 +54,14 @@ namespace CoolForTheSummerApi.Services
 
         public async Task<PostViewModel> GetRandomPostFromRandomBoard()
         {
-            return await GetRandomPostFromBoard(GetRandomBoardStringName());
+            var postViewModel = await GetRandomPostFromBoard(GetRandomBoardStringName());
+            if (postViewModel.FileThumbHref != "" && postViewModel.FileHref != "")
+            {
+                postViewModel.FileThumbBase64 = _imageDownloader.DownloadImageToBase64(postViewModel.FileThumbHref);
+                postViewModel.FileBase64 = _imageDownloader.DownloadImageToBase64(postViewModel.FileHref);
+            }
+
+            return postViewModel;
         }
 
         public async Task<PostViewModel> GetRandomPostFromSpecifiedBoard(string board)
@@ -62,8 +69,8 @@ namespace CoolForTheSummerApi.Services
             var postViewModel = await GetRandomPostFromBoard(board);
             if (postViewModel.FileThumbHref != "" && postViewModel.FileHref != "")
             {
-                postViewModel.LocalThumbFileHref = _imageDownloader.DownloadImageToSiteDirectory(postViewModel.FileThumbHref);
-                postViewModel.LocalFileHref = _imageDownloader.DownloadImageToSiteDirectory(postViewModel.FileHref);
+                postViewModel.FileThumbBase64 = _imageDownloader.DownloadImageToBase64(postViewModel.FileThumbHref);
+                postViewModel.FileBase64 = _imageDownloader.DownloadImageToBase64(postViewModel.FileHref);
             }
 
             return postViewModel;

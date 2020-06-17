@@ -49,11 +49,16 @@ namespace CoolForTheSummerApi
             services.AddSingleton<IBoardEnumValidator, BoardEnumValidator>();
             services.AddSingleton<IPostMapper, PostMapper>();
             services.AddSingleton<IImageDownloaderService, ImageDownloaderService>();
+            services.AddCors(); // Make sure you call this previous to AddMvc
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(
+                options => options.WithOrigins("https://coolforthesummerwebsite-xegdgjxxea-ew.a.run.app").AllowAnyMethod()
+            );
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -66,11 +71,7 @@ namespace CoolForTheSummerApi
                 c.RoutePrefix = string.Empty;
             });
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

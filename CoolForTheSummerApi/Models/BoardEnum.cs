@@ -12,7 +12,6 @@ namespace CoolForTheSummerApi.Models
         C,
         D,
         E,
-        F,
         G,
         Gif,
         H,

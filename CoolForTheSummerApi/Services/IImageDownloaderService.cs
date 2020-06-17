@@ -7,6 +7,6 @@ namespace CoolForTheSummerApi.Services
 {
     public interface IImageDownloaderService
     {
-        public string DownloadImageToSiteDirectory(string url);
+        public string DownloadImageToBase64(string url);
     }
 }
