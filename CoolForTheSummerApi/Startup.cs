@@ -56,7 +56,7 @@ namespace CoolForTheSummerApi
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors(
-                options => options.WithOrigins("https://coolforthesummerwebsite-xegdgjxxea-ew.a.run.app").AllowAnyMethod()
+                options => options.WithOrigins("https://coolforthesummer.co.uk").AllowAnyMethod()
             );
 
             if (env.IsDevelopment())
